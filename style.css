@@ -786,3 +786,59 @@ header .fa-bars {
         font-size: 0.9rem;
     }
 }
+
+
+
+
+
+/* ========== ANIMATION BASE ========== */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px) scale(0.98);
+    transition: .9s cubic-bezier(.22,1,.36,1);
+    filter: blur(5px);
+}
+
+/* Saat muncul */
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+}
+
+/* Slide kiri */
+.reveal-left {
+    transform: translateX(-60px);
+}
+
+/* Slide kanan */
+.reveal-right {
+    transform: translateX(60px);
+}
+
+/* Zoom effect */
+.reveal-zoom {
+    transform: scale(0.85);
+}
+
+/* Rotation subtle */
+.reveal-rotate {
+    transform: rotate(4deg);
+}
+
+/* Stagger effect */
+.stagger-show {
+    transition-delay: calc(var(--i) * 0.12s);
+}
+
+/* Navbar mobile */
+.navbar.active {
+    left: 0;
+    opacity: 1;
+    transition: .4s ease;
+}
+
+/* Navbar bar rotation */
+.fa-bars.fa-times {
+    transform: rotate(180deg);
+}
