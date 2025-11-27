@@ -60,3 +60,56 @@ window.addEventListener("scroll", () => {
 
     home.style.backgroundPositionY = scrollY * 0.3 + "px";
 });
+
+
+gsap.from("header", {
+    y: -80,
+    opacity: 0,
+    duration: 1,
+    ease: "power4.out"
+});
+
+
+gsap.from(".home .content h1", {
+    opacity: 0,
+    y: 50,
+    duration: 1,
+    delay: 0.2
+});
+
+gsap.from(".home .content p", {
+    opacity: 0,
+    y: 40,
+    duration: 1,
+    delay: 0.5
+});
+
+gsap.from(".home .btn", {
+    opacity: 0,
+    y: 20,
+    duration: 1,
+    delay: 0.8
+});
+
+
+gsap.utils.toArray("section").forEach((sec) => {
+    gsap.from(sec, {
+        scrollTrigger: {
+            trigger: sec,
+            start: "top 85%",
+            toggleActions: "play none none reverse"
+        },
+        opacity: 0,
+        y: 60,
+        duration: 1,
+        ease: "power3.out"
+    });
+});
+
+gsap.from(".service .box", {
+    scrollTrigger: ".service",
+    opacity: 0,
+    y: 40,
+    stagger: 0.2,
+    duration: 0.8
+});
