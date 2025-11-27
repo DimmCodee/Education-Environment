@@ -407,7 +407,7 @@ header .fa-bars{
 .donate .form-container form input[type="submit"]:hover{
     color:var(--green);
     border-color: var(--green);
-    background:#fff;
+    background:var(--green);
 }
 
 .post{
