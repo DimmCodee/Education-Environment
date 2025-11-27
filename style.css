@@ -284,22 +284,57 @@ header .fa-bars {
 /* project */
 /* ===== Better Video Section ===== */
 
-.video-wrapper {
-    position: relative;
-    width: 100%;
-    padding-top: 56.25%; /* 16:9 */
-    border-radius: 1rem;
-    overflow: hidden;
+.project {
+    background: #222;
+    padding: 7rem 0 4rem;
 }
 
+.project .heading {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* GRID */
+.video-grid {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+/* CARD */
+.video-card {
+    background: #111;
+    padding: 1rem;
+    border-radius: 1.2rem;
+    box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.4);
+}
+
+/* WRAPPER */
+.video-wrapper {
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    border-radius: 1rem;
+    position: relative;
+}
+
+/* IFRAME FIX — WAJIB */
 .video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     border: none;
+    display: block;
 }
+
+/* ANIMATION */
+.reveal {
+    opacity: 1;   /* untuk test, langsung tampil */
+    transform: none;
+}
+
 
 /* =======================
    DONATE SECTION
